@@ -70,6 +70,13 @@ app.get("/registration",async(req,res)=>{
     }
     
 })
+app.get("/login1",async(req,res)=>{ 
+    try{ await res.render('login'); }
+    catch(err){
+        throw err;
+    }
+    
+})
 
 app.get("/login",async(req,res)=>{
     try{ res.render('login')
