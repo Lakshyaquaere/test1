@@ -173,7 +173,7 @@ try{
     })
    
 
-    res.redirect("http://localhost:8000/registration.ejs?success=true"); 
+    res.redirect("/registration?success=true"); 
     }    
     catch(err){}
 })  
