@@ -159,7 +159,7 @@ try{
         res.render('registration',{error:"Enter valid image"})
       //email vlidation
         if(valid==0){
-            res.redirect("http://localhost:8000/registration.ejs?email-fail=true"); 
+            res.redirect("/registration?email-fail=true"); 
                 }
     }
      else{
@@ -173,7 +173,7 @@ try{
     })
    
 
-    res.redirect("/registration?success=true"); 
+    res.render('registration'); 
     }    
     catch(err){}
 })  
@@ -191,7 +191,7 @@ app.post('/login' ,async(req,res)=>{
           }
           else{
             // res.render('postlogin');
-            res.redirect("http://localhost:8000/login/generate");
+            res.redirect("/login/generate");
            }
         });
 }
