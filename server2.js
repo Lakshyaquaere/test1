@@ -25,6 +25,7 @@ const storage = multer.diskStorage({
     }
   
   })
+
 const upload = multer({ storage })
 
 
@@ -49,12 +50,22 @@ const port = process.env.PORT || 8000;
 const pool= new pg.Pool({
     user: `${process.env.USER}`,
     password: `${process.env.PASSWORD}` ,
-    host:  'localhost',
+    host:  `${process.env.HOST}`,
     port:'5432',
-    database: 'trial',
+    database:  `${process.env.DATABASE}`,
+    ssl: true, 
 
 })
 
+pool.connect()
+  .then(client => {
+    console.log('Connected to PostgreSQL database');
+    // You can perform database operations here
+    client.release(); // Release the client back to the pool
+  })
+  .catch(error => {
+    console.error('Error connecting to PostgreSQL database:', error);
+  });
 //routes
 app.get("/",async(req,res)=>{ 
     try{ await res.render('HOME'); }
