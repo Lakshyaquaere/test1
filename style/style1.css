@@ -1,0 +1,38 @@
+h1{
+    color: rgb(50, 97, 241);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#l{
+   
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   padding: 2px ;
+
+}
+#r{
+    text-align: center;
+    display: flex;
+    justify-content: center;   
+}
+#login{
+    border-radius: 1px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px ;
+    background-color: lightgray;
+
+}
+body {
+    background-color: rgb(158, 255, 255);
+}
+#u{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}

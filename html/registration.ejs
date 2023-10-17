@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="validation.js"></script> -->
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Check for the presence of the success query parameter
+        const successParam = getQueryParam('success');
+        if (successParam === 'true') {
+            // Display the success message
+            document.write('<p>Successfully registered!</p>');
+        }
+        function getQueryemail(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Check for the presence of the success query parameter
+        const successemail = getQueryParam('email-fail');
+        if (successemail  === 'true') {
+            // Display the success message
+            document.write('<p>enter valid email</p>');
+        }
+        
+    </script>       
+    <script>
+        // Check if the page was reloaded
+        if (performance.navigation.type === 1) {
+            // Redirect to the original registration page
+            window.location.href = 'http://localhost:8000/  ';
+        }
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="/style.css">
+   
+
+
+</head>
+<body>
+    <h1>Registration</h1>
+    <div>
+       <h3 id="error"> </h3>
+       
+     <form action="/registration" method="POST" enctype="multipart/form-data">
+
+           <label  for="userName" >UserName</label>
+            <input type="text" id="userName" name="username" required><br>
+            <label for="Address">Address</label>
+            <input type="text" id="Address" required minlength="6"name="Address"><br>
+            <label for="city" >City</label>
+            <input type="text" id="city" name="city" required>
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required ><br>
+            
+            <label>Select Gender:</label>
+            <label>
+              <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female"> Female
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other"> Other
+            </label>
+            <label for="images">Upload images</label>
+                <input type="file" id="image" name="image" accept="image/*" multiple="true">
+
+            
+            <div><label> <input type="submit"id="submit" value="Submit" enctype="application/x-www-form-urlencoded"></label>
+            </div>
+        </form>    
+            
+       
+        
+        
+          
+          
+    </div>
+    <div id="d">
+    </div>
+    <div className="Home">
+        <button id="h">
+            HOME
+        </button>
+        <script>
+            document.getElementById("h").addEventListener('click',()=>{
+               window.location.href='/';
+            })
+    
+               </script>
+ 
+    </div>
+</body>
+</html>

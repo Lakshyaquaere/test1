@@ -1,0 +1,82 @@
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px ;
+    background-color: rgb(232, 238, 239);
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 8px ;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button[id="h"] {
+    background-color: #0074d9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin:0 auto;
+     
+
+
+}
+
+
+
+h1{
+    text-align: center;
+    color: #0074d9;
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+body{
+    background-color: rgb(171, 251, 251);
+    /* background-image: url('./images/download.jfif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+
+}
+
+button[id="h"]:hover{
+    background-color: #0d0c0a;
+}
+input[type="submit"]:hover{
+    background-color: black;
+}
+#error{
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
